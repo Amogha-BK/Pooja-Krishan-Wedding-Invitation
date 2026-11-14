@@ -501,7 +501,16 @@ function EventCard({ event, index }: { event: Celebration; index: number }) {
             </time>
             <dl className="event-schedule">
               {event.schedule.map((item) => (
-                <div key={item.name} className={item.dateLabel ? "event-next-day" : undefined}>
+                <div
+                  key={item.name}
+                  className={
+                    item.dateLabel
+                      ? "event-next-day"
+                      : item.name === "Chaak ceremony"
+                        ? "event-chaak"
+                        : undefined
+                  }
+                >
                   <dt>
                     {item.dateLabel && (
                       <time className="event-following-date" dateTime={item.date}>
@@ -902,14 +911,6 @@ export default function App() {
 
           <section className="celebrations-section" id="celebrations">
             <SectionHeading>Join our celebrations</SectionHeading>
-            <div className="lagan-note">
-              <p className="eyebrow">The celebrations begin</p>
-              <h3>Lagan</h3>
-              <p>
-                <time dateTime={config.lagan.date}>{config.lagan.dateLabel}</time> ·{" "}
-                {config.lagan.time}
-              </p>
-            </div>
             <div className="events">
               {config.celebrations.map((event, index) => (
                 <EventCard key={event.id} event={event} index={index} />

@@ -1,5 +1,5 @@
 export type Celebration = {
-  id: "pre-wedding" | "wedding";
+  id: "lagan" | "pre-wedding" | "wedding";
   shortName: string;
   title: string;
   dateLabel: string;
@@ -58,11 +58,6 @@ export const invitationConfig = {
   artwork: "/assets/kishan-pooja-garden-v2.jpg",
   venue: { ...weddingVenue, mapUrl: maps(`${weddingVenue.name}, ${weddingVenue.address}`) },
   contacts: [] as string[],
-  lagan: {
-    date: "2026-12-01",
-    dateLabel: "Tuesday, 1 December 2026",
-    time: "10:00 AM",
-  },
   optional: {
     travel: "",
     stay: "",
@@ -71,6 +66,22 @@ export const invitationConfig = {
     whatsappHostNumber: "",
   },
   celebrations: [
+    {
+      id: "lagan",
+      shortName: "Lagan",
+      title: "Lagan — The Celebrations Begin",
+      dateLabel: "Tuesday, 1 December 2026",
+      timeLabel: "10:00 AM",
+      schedule: [{ name: "Lagan ceremony", time: "10:00 AM" }],
+      venue: "",
+      address: "",
+      supportingLine: "A beautiful beginning, with the blessings of our loved ones.",
+      start: "2026-12-01T10:00:00+05:30",
+      calendarTitle: "Pooja & Krishan · Lagan Ceremony",
+      image: "/assets/kishan-pooja-turmeric-henna-arch-v3.jpg",
+      scene: "lanterns",
+      mapUrl: "",
+    },
     {
       id: "pre-wedding",
       shortName: "Haldi, Mehendi & Chaak",

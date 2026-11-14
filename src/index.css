@@ -3287,7 +3287,8 @@ footer {
   gap: clamp(0.3rem, 1cqi, 0.6rem);
 }
 .event-content .event-monogram {
-  width: clamp(52px, 13cqi, 80px);
+  width: 120px;
+  max-width: 100%;
 }
 .event-card h3 {
   font-size: clamp(26px, 7cqi, 42px);
@@ -3330,22 +3331,29 @@ footer {
   margin-bottom: 0.4rem;
   font-weight: 600;
 }
-.lagan-note {
-  max-width: 620px;
-  margin: 2rem auto 0;
-  padding: 1.25rem 1rem;
-  border-block: 1px solid var(--gold-light);
-  text-align: center;
-  color: var(--taupe);
+#pre-wedding .event-content {
+  padding-top: 20cqi;
+  padding-bottom: 32cqi;
 }
-.lagan-note h3 {
-  margin-block: 0.35rem;
-  font: 400 2rem/1.2 var(--font-display);
+#pre-wedding .event-schedule {
+  padding: clamp(0.75rem, 3cqi, 1.25rem);
+  border: 1px solid rgb(171 133 46 / 0.35);
+  border-radius: 0.5rem;
+  background: #fff9ed;
+  color: #4c3025;
+  box-shadow: 0 2px 12px rgb(101 84 67 / 0.08);
 }
-.lagan-note > p:last-child {
-  font-size: 0.9375rem;
-  line-height: 1.8;
-  text-wrap: balance;
+#pre-wedding .event-schedule > .event-chaak {
+  padding-top: 0.65rem;
+  border-top: 1px solid rgb(171 133 46 / 0.4);
+  color: #752c27;
+  font-weight: 600;
+}
+#pre-wedding .event-chaak dd {
+  color: #752c27;
+  font-size: 1.2em;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 @media (max-height: 500px) and (orientation: landscape) {

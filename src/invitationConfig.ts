@@ -78,7 +78,7 @@ export const invitationConfig = {
       supportingLine: "A beautiful beginning, with the blessings of our loved ones.",
       start: "2026-12-01T10:00:00+05:30",
       calendarTitle: "Pooja & Krishan · Lagan",
-      image: "/assets/pooja-krishan-lagan-burgundy-v2.jpg",
+      image: "/assets/pooja-krishan-lagan-arch.jpg",
       scene: "lanterns",
       mapUrl: "",
     },

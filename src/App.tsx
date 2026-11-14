@@ -837,6 +837,7 @@ export default function App() {
             <div className="paper-grain" />
             <div className="hero-inner">
               <p className="ganesh-invocation">{config.invocation}</p>
+              <p className="hero-invitation-title">You’re Invited</p>
               <Monogram className="hero-monogram" />
               <p className="eyebrow">The wedding celebrations of</p>
               <h1 ref={invitationHeading} tabIndex={-1}>
@@ -855,22 +856,18 @@ export default function App() {
                 <br />
                 {config.ganeshMantra[1]}
               </p>
-              <div className="hero-invitation">
-                <div className="scroll-cue-slot">
-                  {showScrollCue && (
-                    <a
-                      className="scroll-cue scroll-cue-highlight focus-ring"
-                      href="#invitation"
-                      aria-label="Scroll down to the invitation details"
-                      onClick={() => setShowScrollCue(false)}
-                    >
-                      <span>Scroll down</span>
-                      <ChevronsDown aria-hidden="true" />
-                    </a>
-                  )}
-                </div>
-                <p className="hero-invitation-title">You’re Invited</p>
-                <p>{config.invitationLine}</p>
+              <div className="scroll-cue-slot">
+                {showScrollCue && (
+                  <a
+                    className="scroll-cue scroll-cue-highlight focus-ring"
+                    href="#invitation"
+                    aria-label="Scroll down to the invitation details"
+                    onClick={() => setShowScrollCue(false)}
+                  >
+                    <span>Scroll down</span>
+                    <ChevronsDown aria-hidden="true" />
+                  </a>
+                )}
               </div>
             </div>
             <div className="hero-artwork" aria-hidden="true">
@@ -895,6 +892,7 @@ export default function App() {
               viewport={{ once: true, amount: 0.1 }}
             >
               <p className="ganesh-invocation family-invocation">{config.invocation}</p>
+              <p className="family-invitation-message">{config.invitationLine}</p>
               <p className="translated-blessing">{config.openingBlessing}</p>
               <p className="family-memory">{config.memorialLine}</p>
               <p className="family-blessing">{config.blessingLine}</p>

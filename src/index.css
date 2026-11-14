@@ -2760,24 +2760,20 @@ footer {
 }
 
 /* Invitation message, prayer page and monogram-led celebration cards. */
-.hero-invitation {
-  width: min(100%, 520px);
-  display: grid;
-  gap: 0.5rem;
-  margin-top: 1.75rem;
-  padding: 1.25rem 0.5rem;
-  border-block: 1px solid var(--gold-light);
-  text-wrap: balance;
-}
 .hero-invitation-title {
+  margin-block: 0.75rem 1.25rem;
   color: var(--taupe);
   font: 400 clamp(2.25rem, 6vw, 3rem)/1.2 var(--font-display);
 }
-.hero-invitation > p:not(.hero-invitation-title) {
+.family-section .family-invitation-message {
   max-width: 42ch;
-  margin-inline: auto;
+  margin: 1rem auto 1.75rem;
   color: #756143;
   font: italic 400 clamp(1.15rem, 2.8vw, 1.4rem)/1.6 var(--font-display);
+  text-wrap: balance;
+}
+.hero-inner > .scroll-cue-slot {
+  margin-top: 1.25rem;
 }
 .hero-mantra {
   max-width: 760px;

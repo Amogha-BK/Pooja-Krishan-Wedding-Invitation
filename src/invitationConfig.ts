@@ -62,7 +62,7 @@ export const invitationConfig = {
     travel: "",
     stay: "",
     contact: "",
-    musicUrl: "/assets/kudmayi.mp3",
+    musicUrl: "/assets/gaura-shiv-ki.mp3",
     whatsappHostNumber: "",
   },
   celebrations: [

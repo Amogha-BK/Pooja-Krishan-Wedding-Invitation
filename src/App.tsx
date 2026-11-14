@@ -463,7 +463,7 @@ function EventLocation({ event, className }: { event: Celebration; className: st
           target="_blank"
           rel="noreferrer"
         >
-          <MapPin /> {event.id === "pre-wedding" ? "Chaak Location" : "Directions"}
+          <MapPin /> Location
         </a>
       </div>
     </div>
@@ -848,7 +848,7 @@ export default function App() {
               <p className="ganesh-invocation">{config.invocation}</p>
               <p className="hero-invitation-title">You’re Invited</p>
               <Monogram className="hero-monogram" />
-              <p className="eyebrow">The wedding celebrations of</p>
+              <p className="eyebrow">To the wedding celebrations of</p>
               <h1 ref={invitationHeading} tabIndex={-1}>
                 <span className="hero-name">{config.couple.first}</span>
                 <span className="hero-ampersand">&amp;</span>

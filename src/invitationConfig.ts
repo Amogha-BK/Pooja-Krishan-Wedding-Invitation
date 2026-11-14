@@ -4,7 +4,7 @@ export type Celebration = {
   title: string;
   dateLabel: string;
   timeLabel: string;
-  schedule: { name: string; time: string }[];
+  schedule: { name: string; time: string; dateLabel?: string; date?: string }[];
   venue: string;
   address: string;
   supportingLine: string;
@@ -54,10 +54,15 @@ export const invitationConfig = {
     "Please join us for the celebrations and bless the bride and groom with your gracious presence.",
   homeAddress,
   hosts: "Mrs. Madhu & Mr. Mukesh Kumar Bansal and family",
-  monogram: "/assets/krishan-pooja-monogram-360.png",
+  monogram: "/assets/pooja-krishan-monogram.png",
   artwork: "/assets/kishan-pooja-garden-v2.jpg",
   venue: { ...weddingVenue, mapUrl: maps(`${weddingVenue.name}, ${weddingVenue.address}`) },
   contacts: [] as string[],
+  lagan: {
+    date: "2026-12-01",
+    dateLabel: "Tuesday, 1 December 2026",
+    time: "10:00 AM",
+  },
   optional: {
     travel: "",
     stay: "",
@@ -71,11 +76,11 @@ export const invitationConfig = {
       shortName: "Haldi, Mehendi & Chaak",
       title: "Pre-wedding — A Joyful Beginning",
       dateLabel: "Wednesday, 2 December 2026",
-      timeLabel: "9:00 am, 12:00 pm & 2:00 pm",
+      timeLabel: "9:00 AM, 12:00 PM & 2:00 PM",
       schedule: [
-        { name: "Haldi ceremony", time: "9:00 am" },
-        { name: "Mehendi ceremony", time: "12:00 pm" },
-        { name: "Chaak ceremony", time: "2:00 pm" },
+        { name: "Haldi ceremony", time: "9:00 AM" },
+        { name: "Mehendi ceremony", time: "12:00 PM" },
+        { name: "Chaak ceremony", time: "2:00 PM" },
       ],
       venue: "Bride’s Home",
       address: homeAddress,
@@ -84,22 +89,29 @@ export const invitationConfig = {
       calendarTitle: "Pooja & Krishan · Pre-wedding Celebrations",
       image: "/assets/kishan-pooja-turmeric-henna-arch-v3.jpg",
       scene: "lanterns",
-      mapUrl: maps(homeAddress),
+      mapUrl: "https://maps.app.goo.gl/zoZ5BZqFUMimqNde9?g_st=aw",
     },
     {
       id: "wedding",
       shortName: "The Wedding",
       title: "Wedding — A Promise of Forever",
       dateLabel: "Thursday, 3 December 2026",
-      timeLabel: "Procession departs at 7:00 p.m.",
+      timeLabel: "Dinner at 8:00 PM · Welcome of Baraat at 9:00 PM",
       schedule: [
-        { name: "Groom’s ceremonial horse ride", time: "5:00 p.m." },
-        { name: "Wedding procession departure", time: "7:00 p.m." },
+        { name: "Bhaat", time: "10:00 AM" },
+        { name: "Dinner", time: "8:00 PM" },
+        { name: "Welcome of Baraat", time: "9:00 PM" },
+        {
+          name: "Vidaai",
+          time: "Under the stars",
+          dateLabel: "Friday, 4 December 2026",
+          date: "2026-12-04",
+        },
       ],
       venue: weddingVenue.name,
       address: weddingVenue.address,
       supportingLine: "Sacred vows, two hearts and a lifetime of togetherness.",
-      start: "2026-12-03T17:00:00+05:30",
+      start: "2026-12-03T10:00:00+05:30",
       calendarTitle: "Pooja & Krishan · Wedding Celebrations",
       image: "/assets/kishan-pooja-wedding-arch-v3.jpg",
       scene: "fire",

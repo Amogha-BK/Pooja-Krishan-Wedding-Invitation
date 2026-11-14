@@ -2048,6 +2048,19 @@ footer .monogram {
   font: 700 clamp(14px, 1.8vw, 16px)/1.7 var(--font-body);
   letter-spacing: 0.04em;
 }
+.opening-music-corner {
+  position: absolute;
+  top: max(1.5rem, env(safe-area-inset-top));
+  right: max(1.5rem, env(safe-area-inset-right));
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: #806a4f;
+  border: 1px solid rgb(171 133 46 / 0.3);
+  border-radius: 50%;
+  background: rgb(250 246 238 / 0.85);
+}
 .opening-logo-glow {
   position: absolute;
   inset: -9px;
@@ -3261,6 +3274,82 @@ footer {
   .paper-grain {
     background-image: linear-gradient(115deg, rgb(255 255 255 / 0.12), transparent 60%);
   }
+}
+
+/* Let the programme determine card height so every ceremony remains visible. */
+.event-portrait {
+  aspect-ratio: auto;
+  min-height: 150cqi;
+}
+.event-portrait > img {
+  aspect-ratio: auto;
+  object-fit: fill;
+}
+.event-content {
+  margin: 0;
+  padding: 24cqi 13cqi 27cqi;
+  gap: clamp(0.3rem, 1cqi, 0.6rem);
+}
+.event-content .event-monogram {
+  width: clamp(52px, 13cqi, 80px);
+}
+.event-card h3 {
+  font-size: clamp(26px, 7cqi, 42px);
+  line-height: 1.15;
+}
+.event-subtitle {
+  margin-bottom: 0.3rem;
+  font-size: clamp(15px, 3.8cqi, 22px);
+}
+.event-details {
+  padding-block: 0.4rem;
+  font-size: clamp(13px, 3.5cqi, 17px);
+  line-height: 1.6;
+}
+.event-schedule {
+  gap: clamp(0.65rem, 2.2cqi, 1rem);
+}
+.event-schedule > div {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  text-align: left;
+}
+.event-schedule dd {
+  flex-shrink: 0;
+  font-size: 1em;
+}
+.event-schedule > .event-next-day {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--gold-light);
+  text-align: center;
+}
+.event-following-date {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+.lagan-note {
+  max-width: 620px;
+  margin: 2rem auto 0;
+  padding: 1.25rem 1rem;
+  border-block: 1px solid var(--gold-light);
+  text-align: center;
+  color: var(--taupe);
+}
+.lagan-note h3 {
+  margin-block: 0.35rem;
+  font: 400 2rem/1.2 var(--font-display);
+}
+.lagan-note > p:last-child {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  text-wrap: balance;
 }
 
 @media (max-height: 500px) and (orientation: landscape) {

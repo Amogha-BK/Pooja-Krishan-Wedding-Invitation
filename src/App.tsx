@@ -41,7 +41,7 @@ function Monogram({ className = "" }: { className?: string }) {
     <img
       className={`monogram ${className}`}
       src={config.monogram}
-      alt="Wedding monogram for Pooja and Krishan"
+      alt="P & K wedding monogram for Pooja and Krishan"
     />
   );
 }
@@ -182,11 +182,17 @@ function InvitationOpening({ onOpen }: { onOpen: () => void }) {
           <Pointer className="opening-tap-hint" strokeWidth={1.2} aria-hidden="true" />
           <p className="opening-instruction">Tap the monogram</p>
           <p className="opening-whisper">to open our invitation</p>
-          <p className="opening-song-note">
-            <Music size={11} aria-hidden="true" /> Opens with music
-          </p>
         </motion.div>
       </div>
+      <motion.span
+        className="opening-music-corner"
+        role="img"
+        aria-label="Music plays when you open the invitation"
+        title="Music plays when you open the invitation"
+        exit={{ opacity: 0 }}
+      >
+        <Music size={18} aria-hidden="true" />
+      </motion.span>
     </motion.section>
   );
 }
@@ -343,7 +349,7 @@ function Navigation({ children }: { children: React.ReactNode }) {
         aria-label="Home"
         onClick={() => setOpen(false)}
       >
-        K <span>&</span> P
+        P <span>&</span> K
       </a>
       <div id="invitation-navigation" className={`nav-links ${open ? "nav-links-open" : ""}`}>
         {navItems.map(([label, id]) => (
@@ -457,7 +463,7 @@ function EventLocation({ event, className }: { event: Celebration; className: st
           target="_blank"
           rel="noreferrer"
         >
-          <MapPin /> Directions
+          <MapPin /> {event.id === "pre-wedding" ? "Chaak Location" : "Directions"}
         </a>
       </div>
     </div>
@@ -495,8 +501,15 @@ function EventCard({ event, index }: { event: Celebration; index: number }) {
             </time>
             <dl className="event-schedule">
               {event.schedule.map((item) => (
-                <div key={item.name}>
-                  <dt>{item.name}</dt>
+                <div key={item.name} className={item.dateLabel ? "event-next-day" : undefined}>
+                  <dt>
+                    {item.dateLabel && (
+                      <time className="event-following-date" dateTime={item.date}>
+                        {item.dateLabel}
+                      </time>
+                    )}
+                    {item.name}
+                  </dt>
                   <dd>{item.time}</dd>
                 </div>
               ))}
@@ -891,6 +904,14 @@ export default function App() {
 
           <section className="celebrations-section" id="celebrations">
             <SectionHeading>Join our celebrations</SectionHeading>
+            <div className="lagan-note">
+              <p className="eyebrow">The celebrations begin</p>
+              <h3>Lagan</h3>
+              <p>
+                <time dateTime={config.lagan.date}>{config.lagan.dateLabel}</time> ·{" "}
+                {config.lagan.time}
+              </p>
+            </div>
             <div className="events">
               {config.celebrations.map((event, index) => (
                 <EventCard key={event.id} event={event} index={index} />

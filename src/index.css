@@ -3351,6 +3351,30 @@ footer {
   white-space: nowrap;
 }
 
+/* Keep every inside crest prominent without a fixed desktop size on phones. */
+@media (max-width: 799px) {
+  .hero-monogram,
+  .event-content .event-monogram {
+    width: clamp(92px, 26vw, 112px);
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .event-content .event-monogram {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 799px) and (max-height: 500px) and (orientation: landscape) {
+  .hero-monogram,
+  .event-content .event-monogram {
+    width: clamp(80px, 20vh, 100px);
+  }
+}
+
 @media (max-height: 500px) and (orientation: landscape) {
   .opening-welcome {
     padding-block: 0.25rem;

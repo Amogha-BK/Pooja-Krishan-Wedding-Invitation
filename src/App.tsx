@@ -41,7 +41,7 @@ function Monogram({ className = "" }: { className?: string }) {
     <img
       className={`monogram ${className}`}
       src={config.monogram}
-      alt="K and P wedding monogram for Krishan and Pooja"
+      alt="Wedding monogram for Pooja and Krishan"
     />
   );
 }
@@ -64,7 +64,7 @@ function InvitationOpening({ onOpen }: { onOpen: () => void }) {
   return (
     <motion.section
       className="invitation-opening"
-      aria-label="Open Krishan and Pooja’s wedding invitation"
+      aria-label="Open Pooja and Krishan’s wedding invitation"
       initial={{ opacity: 1 }}
       exit={{ opacity: reducedMotion ? 0 : [1, 1, 0] }}
       transition={{ duration: reducedMotion ? 0.15 : 1.65, times: [0, 0.9, 1], ease: "easeInOut" }}
@@ -139,7 +139,7 @@ function InvitationOpening({ onOpen }: { onOpen: () => void }) {
             onClick={onOpen}
             disabled={!isPresent}
             autoFocus
-            aria-label="Open Krishan and Pooja’s wedding invitation"
+            aria-label="Open Pooja and Krishan’s wedding invitation"
             whileHover={reducedMotion ? undefined : { scale: 1.09, rotate: -3 }}
             whileTap={reducedMotion ? undefined : { scale: 0.9, rotate: 2 }}
             exit={
@@ -448,6 +448,8 @@ function EventLocation({ event, className }: { event: Celebration; className: st
   if (!event.venue) return null;
   return (
     <div className={`event-location ${className}`}>
+      <p className="event-venue">{event.venue}</p>
+      <p className="event-address">{event.address}</p>
       <div className="event-actions">
         <a
           className="button button-outline focus-ring"
@@ -692,7 +694,7 @@ function RSVP() {
         </AnimatePresence>
         <label className="field">
           <span>
-            Message for Krishan &amp; Pooja <em>Optional</em>
+            Message for Pooja &amp; Krishan <em>Optional</em>
           </span>
           <textarea
             rows={4}
@@ -855,10 +857,7 @@ export default function App() {
                   )}
                 </div>
                 <p className="hero-invitation-title">You’re Invited</p>
-                <p>
-                  With joyful hearts, we invite you to celebrate our wedding and bless our new
-                  beginning.
-                </p>
+                <p>{config.invitationLine}</p>
               </div>
             </div>
             <div className="hero-artwork" aria-hidden="true">
@@ -921,22 +920,24 @@ export default function App() {
               <span>From:</span>
               <p className="closing-message">{config.hosts}</p>
               <p>{config.homeAddress}</p>
-              <div className="family-contacts">
-                <div className="contact-numbers" aria-label="Family contact numbers">
-                  <span className="contact-label">Contact:</span>
-                  {config.contacts.map((number) => (
-                    <span key={number} className="contact-number">
-                      {number.length === 10 ? (
-                        <a className="focus-ring" href={`tel:+91${number}`}>
-                          {number}
-                        </a>
-                      ) : (
-                        number
-                      )}
-                    </span>
-                  ))}
+              {config.contacts.length > 0 && (
+                <div className="family-contacts">
+                  <div className="contact-numbers" aria-label="Family contact numbers">
+                    <span className="contact-label">Contact:</span>
+                    {config.contacts.map((number) => (
+                      <span key={number} className="contact-number">
+                        {number.length === 10 ? (
+                          <a className="focus-ring" href={`tel:+91${number}`}>
+                            {number}
+                          </a>
+                        ) : (
+                          number
+                        )}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="closing-rule" aria-hidden="true" />
               <p>Our celebration is complete with you.</p>
             </div>

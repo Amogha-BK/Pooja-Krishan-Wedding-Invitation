@@ -678,8 +678,8 @@ textarea:focus-visible {
 .hero h1 {
   margin: 0.7rem 0 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: baseline;
   justify-content: center;
   gap: clamp(0.35rem, 2vw, 1rem);
   width: 100%;
@@ -1950,11 +1950,10 @@ footer .monogram {
 }
 .opening-names {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  justify-items: center;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  gap: clamp(10px, 2vh, 18px);
-  margin: clamp(1rem, 3vh, 1.75rem) 0;
+  gap: clamp(22px, 3.8vw, 32px);
+  margin: clamp(2.5rem, 6vh, 3.5rem) 0;
   font: 700 clamp(26px, 8.2vw, 72px)/1.2 var(--font-display);
   letter-spacing: -0.02em;
 }
@@ -1963,10 +1962,10 @@ footer .monogram {
   white-space: nowrap;
 }
 .opening-names > span:first-child {
-  justify-self: center;
+  justify-self: end;
 }
 .opening-names > span:last-child {
-  justify-self: center;
+  justify-self: start;
 }
 .opening-logo-button {
   position: relative;

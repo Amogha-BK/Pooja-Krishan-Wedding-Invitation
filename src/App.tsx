@@ -506,7 +506,7 @@ function EventCard({ event, index }: { event: Celebration; index: number }) {
                   className={
                     item.dateLabel
                       ? "event-next-day"
-                      : item.name === "Chaak ceremony"
+                      : item.name === "Chaak"
                         ? "event-chaak"
                         : undefined
                   }

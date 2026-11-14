@@ -1,0 +1,9 @@
+# Distinct Lagan background, version 2
+
+Generated with the built-in imagegen tool. Burgundy silk, pearl and jasmine strings, lotus corner motifs, and a ceremonial puja arrangement distinguish Lagan from the existing yellow Haldi/Mehendi arch. The central space stays clear for live text.
+
+Assets: `pooja-krishan-lagan-burgundy-v2.jpg` and `pooja-krishan-lagan-burgundy-v2-640.jpg` (mobile JPEG export).
+
+## Final generation prompt
+
+Create a premium Indian Lagan ritual invitation background, portrait 2:3, 1024x1536 composition. It must look CLEARLY DISTINCT from a yellow Haldi or Mehendi marigold arch. No marigolds, no yellow drapes, no turmeric bowls, no henna cones, no scalloped architectural arch, no columns. Elegant warm ivory handmade-paper center, surrounded at the top and upper corners by rich deep burgundy silk drapes with fine antique-gold embroidery and sparse strings of white pearls and jasmine. A thin rectangular antique-gold double-line stationery border runs along the outer margins, with delicate gold lotus motifs at the corners. At the bottom 18 percent, arrange a refined ceremonial Lagan puja still life on burgundy brocade: ornate gold-and-silver thali with kumkum and uncooked rice, sacred red-and-gold thread, betel leaves and whole betel nuts, a small coconut kalash, two glowing brass diyas, blush and white lotus flowers. Soft warm natural light, luxurious detailed painterly realism, restrained burgundy antique-gold ivory and blush palette matching elegant wedding stationery. The whole middle between 22 and 78 percent of height and 12 and 88 percent of width must be completely clear plain light ivory negative space for a live website monogram, heading, date, schedule. Keep ornaments only at top, edges and bottom. No people, no text, no letters, no numbers, no logo or monogram. Deliver an elegant distinctly Lagan-themed background, not a generic Haldi backdrop.
